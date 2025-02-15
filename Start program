@@ -1,0 +1,82 @@
+# Banking-Process-System
+import java.util.*;
+import javax.imageio.IIOException;
+public class App{
+
+    /*static String name;
+    static  int balance = 1000;
+
+    static void deposite(int amt){
+        if(amt>0){
+        balance=balance+amt;
+        System.out.println("Money is Deposited succefully...");
+        System.out.println("----------------------------------------------");
+        }
+        else{
+            System.out.println("Sorry this is not deposted because your deposite amount is zero");
+        }
+
+    }
+    static void withdraw(int amt){
+        if(balance>amt){
+        balance=balance-amt;
+        System.out.println("Money Withdraw succefully.......");
+        System.out.println("--------------------------------------------------");
+        }
+        else{
+            System.out.println("Sorry does not sufficient balance in your acount please deposite money");
+            System.out.println("----------------------------------------------------------------------------");
+        }
+
+    }
+    static void display(int amt){
+
+        System.out.println("current balance in your account : "+amt+"rs");
+        System.out.println("------------------------------------------------");
+    }*/
+    public static void main(String[] args) throws IIOException{
+        Scanner ammount = new Scanner(System.in);
+
+        while (true) { 
+            System.out.println("----Select Choice----");
+            System.out.println("Press 1 to deposit money in your Account");
+            System.out.println("Press 2 to withdraw money from your Account");
+            System.out.println("Press 3 to check your current balance");
+            int choice = ammount.nextInt();
+            ammount.nextLine(); // Consume newline
+
+            if (choice == 1) {
+                System.out.println("Enter your name: ");
+                String name1 = ammount.nextLine();
+                System.out.println("Enter your Phone number: ");
+                long Cphone = ammount.nextLong();
+                ammount.nextLine(); // ✅ Consume newline after nextLong()
+
+                System.out.println("Enter your address: "); // ✅ Corrected prompt
+                String Caddress = ammount.nextLine();
+
+                System.out.println("Enter your balance: ");
+                int balance1 = ammount.nextInt();
+
+                // ✅ Creating Student object with correct parameters
+                Student d = new Student(name1, Cphone, Caddress, balance1);
+                System.out.println("Student details: " + d);
+
+                // Insert into database
+                Insertdata.insertquery1(d);
+            }
+        //}
+         //else if(choice==2){
+        //System.out.println("Enter money you want to withdraw : ");
+        //int withdraw=ammount.nextInt();
+        //withdraw(withdraw);
+       // }
+        //else if(choice==3){
+       // display(balance);
+        //}
+        else{
+            System.out.println("Please select vailide choice");
+        }
+        }
+    }
+}
