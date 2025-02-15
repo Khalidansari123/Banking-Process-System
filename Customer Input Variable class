@@ -1,0 +1,76 @@
+public class Student {
+
+    private int Cid;
+    private String name;
+    private long phone;
+    private String address;
+    private int balance;
+
+    public Student() {
+        super();
+    }
+
+
+    public Student(int Cid, String address, int balance, String name, long phone) {
+        this.Cid = Cid;
+        this.address = address;
+        this.balance = balance;
+        this.name = name;
+        this.phone = phone;
+    }
+    public Student(String name, long phone, String address, int balance) {
+        this.name = name;
+        this.phone = phone;
+        this.address = address;
+        this.balance = balance;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public long getPhone() {
+        return phone;
+    }
+    public void setPhone(long phone) {
+        this.phone = phone;
+    }
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public int getCid() {
+        return Cid;
+    }
+    public void setCid(int cid) {
+        Cid = cid;
+    }
+    public int getBalance() {
+        return balance;
+    }
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Student{");
+        sb.append("name=").append(name);
+        sb.append(", phone=").append(phone);
+        sb.append(", address=").append(address);
+        sb.append(", Cid=").append(Cid);
+        sb.append(", balance=").append(balance);
+        sb.append('}');
+        return sb.toString();
+    }
+
+    
+    
+    
+
+}
